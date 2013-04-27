@@ -1,26 +1,26 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# nagios-notification-google-calendar
+# boundary_nagios_events_handler
 # setup.py
 
 from setuptools import setup, find_packages
 
-from notification_google_calendar import __author__, __email__, __version__, __licence__, __description__, __url__
+from boundary_nagios_events_handler import __author__, __email__, __version__, __licence__, __description__, __url__
 
 SHARED_FILES = ['README.rst', 'COPYING', ]
 
 setup(
-    name="nagios_notification_google_calendar",
+    name="boundary-nagios-events-handler",
     version=__version__,
     packages=find_packages(),
-    scripts=['notification_google_calendar.py', ],
-    install_requires=['httplib2', 'oauth2client', 'google-api-python-client', ],
+    scripts=['boundary_nagios_events_handler.py', ],
+    install_requires=['httplib2' ],
     package_data={
         '': SHARED_FILES,
     },
     data_files=[
-        ('/usr/share/doc/nagios-notification-google-calendar/', SHARED_FILES),
+        ('/usr/share/doc/boundary-nagios-events-handler/', SHARED_FILES),
     ],
     author=__author__,
     author_email=__email__,
